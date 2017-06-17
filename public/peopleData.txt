@@ -1,4 +1,4 @@
-var peopleArr = [MargaretHamilton, AdaLovelace, yuri, sasha];
+var peopleArr = [MargaretHamilton, AdaLovelace, GraceHopper, AnitaBorg];
 
 var MargaretHamilton = {
 	name: ‘Margaret Hamilton’,
