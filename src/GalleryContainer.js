@@ -7,15 +7,30 @@ class GalleryContainer extends Component {
 
     this.state = {
       data: [
-              {name: 'Jamie Davella',
-               url: 'portfolio-pic.jpg',
-               languages: 'Javascript, React, React Native'
+              {
+                name: 'Margaret Hamilton',
+                url: 'portfolio-pic.jpg',
+                languages: 'C, Go, Ruby',
+                bio: "Looking to meet up once a week at night to work on my side projects. I currently don’t need help but it would be nice to have company.",
+              },
+              {
+                name: 'Ada Lovelace',
+                url: 'https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAZjAAAAJDM4Y2ZmYjU0LTI4MjMtNDQ4Ny1iMDBiLTFhMWEzODBmYzY3Yg.jpg',
+                languages: 'HTML/CSS, JavaScript, Python’',
+                bio: 'Interested in education tech. Would like to meet up for a Sunday and build a project.'
              },
-               {name: 'Beth Sterling',
+             {
+               name: 'Grace Hopper',
                url: 'https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAZjAAAAJDM4Y2ZmYjU0LTI4MjMtNDQ4Ny1iMDBiLTFhMWEzODBmYzY3Yg.jpg',
-               languages: 'Javascript, CSS, HTML, UI',
-               interest: 'Looking to learn and a build a project with react'
-             }
+               languages: 'Java, JavaScript, C',
+               bio: 'Interested in learning Go. Would like to meet up on the weekend to watch YouTube videos and tutorials to build a project with Go.'
+            },
+            {
+              name: 'Anita Borg',
+              url: 'https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAZjAAAAJDM4Y2ZmYjU0LTI4MjMtNDQ4Ny1iMDBiLTFhMWEzODBmYzY3Yg.jpg',
+              languages: 'HTML/CSS, JavaScript, Ruby',
+              bio: 'Recent bootcamp grad looking to improve my skills by building projects or work on open source projects. It would be nice to have someone to bounce ideas and questions off of or pair program.'
+           },
              ],
       arrayIndex: 0,
     };
@@ -53,24 +68,26 @@ class GalleryContainer extends Component {
   render() {
     return (
       <div>
-        <div>
+        <div className="content">
           <img
             src={this.state.data[this.state.arrayIndex].url}
-            style={{ maxWidth: '10%', borderRadius: '50%' }}
+            style={{ maxWidth: '100%', borderRadius: '50%' }}
         />
-          <p>{this.state.data[0].languages}</p>
-          <p>intersted in working on the weekends to build a side project. Interested in public transportation</p>
+          <p>{this.state.data[this.state.arrayIndex].languages}</p>
+          <p>{this.state.data[this.state.arrayIndex].bio}</p>
         </div>
-        <div>
+        <div className="left-arrow">
           <i
                 className="fa fa-3x white fa-arrow-left zoomedNavigationLeft"
-                onClick={this.goLeft}
+                onClick={this.goRight}
                 aria-hidden="true"
           />
+          </div>
+          <div className="right-arrow">
           <i
-                    className="fa fa-3x white fa-arrow-right zoomedNavigationRight"
-                    onClick={this.goRight}
-                    aria-hidden="true"
+                  className="fa fa-3x white fa-arrow-right zoomedNavigationRight"
+                  onClick={this.goRight}
+                  aria-hidden="true"
           />
         </div>
       </div>
