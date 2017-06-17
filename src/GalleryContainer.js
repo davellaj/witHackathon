@@ -10,25 +10,25 @@ class GalleryContainer extends Component {
       data: [
               {
                 name: 'Margaret Hamilton',
-                url: 'portfolio-pic.jpg',
+                url: 'm.jpg',
                 languages: 'C, Go, Ruby',
                 bio: "Looking to meet up once a week at night to work on my side projects. I currently don’t need help but it would be nice to have company.",
               },
               {
                 name: 'Ada Lovelace',
-                url: 'https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAZjAAAAJDM4Y2ZmYjU0LTI4MjMtNDQ4Ny1iMDBiLTFhMWEzODBmYzY3Yg.jpg',
+                url: 'al.jpg',
                 languages: 'HTML/CSS, JavaScript, Python’',
                 bio: 'Interested in education tech. Would like to meet up for a Sunday and build a project.'
              },
              {
                name: 'Grace Hopper',
-               url: 'https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAZjAAAAJDM4Y2ZmYjU0LTI4MjMtNDQ4Ny1iMDBiLTFhMWEzODBmYzY3Yg.jpg',
+               url: 'g.jpg',
                languages: 'Java, JavaScript, C',
                bio: 'Interested in learning Go. Would like to meet up on the weekend to watch YouTube videos and tutorials to build a project with Go.'
             },
             {
               name: 'Anita Borg',
-              url: 'https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAZjAAAAJDM4Y2ZmYjU0LTI4MjMtNDQ4Ny1iMDBiLTFhMWEzODBmYzY3Yg.jpg',
+              url: 'ab.jpg',
               languages: 'HTML/CSS, JavaScript, Ruby',
               bio: 'Recent bootcamp grad looking to improve my skills by building projects or work on open source projects. It would be nice to have someone to bounce ideas and questions off of or pair program.'
            },
