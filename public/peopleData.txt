@@ -4,7 +4,7 @@ var theresa = {
 	name: ’Theresa’,
 	skills: [‘C’, ‘Go’, ‘Ruby’],
 	bio: ‘Looking to meet up once a week at night to work on my side projects. I currently don’t need help but it would be nice to have company. ’,
-	image: ’t.jpg’
+	image: ‘t.jpg’
 }
 
 var megan = {
