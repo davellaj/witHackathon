@@ -6,13 +6,26 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
+        <div className="addIcon">
+          <img
+            src='addIcon.png'
+            alt="add"
+            style={{ maxWidth: '10%', borderRadius: '50%', float: 'right' }}
+          />
         </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+          <div className="mainIconContainer">
+            <div className="mainIcon">
+              <h3>Events</h3>
+            </div>
+            <div className="mainTwoIcon">
+              <div className="mainIcon">
+                <h3>People</h3>
+              </div>
+              <div className="mainIcon">
+                <h3>Projects</h3>
+              </div>
+            </div>
+        </div>
       </div>
     );
   }
