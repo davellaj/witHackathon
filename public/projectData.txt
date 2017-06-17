@@ -1,0 +1,17 @@
+var projectArr = [photoshare, bikeout];
+
+var photoshare = {
+	title: ‘PhotoShare’,
+	description: ‘Building a family photo sharing app for mobile. I am new to React Native. The prototype is built in React as a responsive web app but it should be a mobile app. Looking for partners who want to learn and work on React Native with me. I also need help with design and UI if someone is interested in looking over the project and offering feedback/help. Looking for a long term partner that can meet nights and weekends or meet up and program with me for a day. Long term project.’,
+	meeting_time: [Saturday, Sunday, Evenings],
+	preferred_location: ‘Richmond, VA’,
+	skills_needed: [HTML/CSS, JavaScript, Java, Objective-C, Swift, React Native]
+}
+
+var bikeout = {
+	title: ‘BikeOut’,
+	description: ‘Want to try a project with data visualization and machine learning. Want to take data from Citi Bike API and predict which stations will be running low on bikes. No previous knowledge of machine learning or data visualization but have used the Citi Bike API before.’,
+	meeting_time: [Monday, Tuesday, Wednesday, Thursday, Friday, Mornings, Afternoons],
+	preferred_location: ‘New York, NY’,
+	skills_needed: [Java, Objective-C, Swift, Python]
+}
