@@ -1,12 +1,22 @@
 import React, { Component } from 'react';
-import { hashHistory } from 'react-router';
+import './GalleryContainer.css';
 
 class GalleryContainer extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      data: ['portfolio-pic', 'https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAZjAAAAJDM4Y2ZmYjU0LTI4MjMtNDQ4Ny1iMDBiLTFhMWEzODBmYzY3Yg.jpg'],
+      data: [
+              {name: 'Jamie Davella',
+               url: 'portfolio-pic.jpg',
+               languages: 'Javascript, React, React Native'
+             },
+               {name: 'Beth Sterling',
+               url: 'https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAZjAAAAJDM4Y2ZmYjU0LTI4MjMtNDQ4Ny1iMDBiLTFhMWEzODBmYzY3Yg.jpg',
+               languages: 'Javascript, CSS, HTML, UI',
+               interest: 'Looking to learn and a build a project with react'
+             }
+             ],
       arrayIndex: 0,
     };
 
@@ -21,20 +31,20 @@ class GalleryContainer extends Component {
   }
 
   goLeft() {
-    if (this.state.zoomedIndex === 0) {
+    if (this.state.arrayIndex === 0) {
       return;
     }
-    const newIndex = this.props.zoomedIndex - 1;
+    const newIndex = this.props.arrayIndex - 1;
     this.setState({
       arrayIndex: newIndex,
     });
   }
 
   goRight() {
-    if (this.state.zoomedIndex === this.state.data.length - 1) {
+    if (this.state.arrayIndex === this.state.data.length - 1) {
       return;
     }
-    const newIndex = this.state.zoomedIndex + 1;
+    const newIndex = this.state.arrayIndex + 1;
     this.setState({
       arrayIndex: newIndex,
     });
@@ -42,35 +52,29 @@ class GalleryContainer extends Component {
 
   render() {
     return (
-      <div className="galleryZoomed">
-        <div className="flexZoomedContainer">
-          <div className="zoomedPhotoContainer">
-            <div className="zoomedNavigation">
-              <i
+      <div>
+        <div>
+          <img
+            src={this.state.data[this.state.arrayIndex].url}
+            style={{ maxWidth: '10%', borderRadius: '50%' }}
+        />
+          <p>{this.state.data[0].languages}</p>
+          <p>intersted in working on the weekends to build a side project. Interested in public transportation</p>
+        </div>
+        <div>
+          <i
                 className="fa fa-3x white fa-arrow-left zoomedNavigationLeft"
                 onClick={this.goLeft}
                 aria-hidden="true"
-              />
-              <i
-                className="fa fa-3x white fa-arrow-right zoomedNavigationRight"
-                onClick={this.goRight}
-                aria-hidden="true"
-              />
-            </div>
-            <i
-              className="zoomedNavigationExit fa fa-times"
-              aria-hidden="true"
-              alt="close"
-              onClick={this.zoom}
-            />
-            <div>
-              <img className="zoomedPhoto" src='portfolio-pic.jpg' alt="large" />
-            </div>
-          </div>
+          />
+          <i
+                    className="fa fa-3x white fa-arrow-right zoomedNavigationRight"
+                    onClick={this.goRight}
+                    aria-hidden="true"
+          />
         </div>
       </div>
-    );
-  }
+  )}
 }
 
 export default GalleryContainer;
