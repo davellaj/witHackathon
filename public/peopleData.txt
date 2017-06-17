@@ -1,3 +1,5 @@
+var peopleArr = [theresa, megan, yuri, sasha];
+
 var theresa = {
 	name: ’Theresa’,
 	gender: ‘female’,
