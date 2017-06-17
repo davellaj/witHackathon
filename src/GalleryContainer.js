@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './GalleryContainer.css';
+import Button from 'react-button'
 
 class GalleryContainer extends Component {
   constructor(props) {
@@ -73,6 +74,7 @@ class GalleryContainer extends Component {
                     aria-hidden="true"
           />
         </div>
+        <Button>Return to home</Button>
       </div>
   )}
 }

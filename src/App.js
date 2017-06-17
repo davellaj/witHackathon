@@ -1,17 +1,20 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-// import { hashHistory } from 'react-router';
-
+import GalleryContainer from './GalleryContainer'
+import Add from './add'
+import Button from 'react-button'
 
 class App extends Component {
-  render() {
-    constructor(props) {
+  constructor(props) {
       super(props);
       this.state = {
+        showOptions: true,
         showComponent: false,
+        showAddComponent: false,
       };
       this.openPeople = this.openPeople.bind(this);
+      this.handleAddClick = this.handleAddClick.bind(this);
     }
 
     openPeople() {
@@ -20,31 +23,35 @@ class App extends Component {
       });
     }
 
+    handleAddClick() {
+      this.setState({
+        showAddComponent: true,
+      })
+    }
+  render() {
+
+
     return (
       <div className="App">
-        <div className="addIcon">
-          <img
-            src='addIcon.png'
-            alt="add"
-            style={{ maxWidth: '10%', borderRadius: '50%', float: 'right' }}
-          />
-        </div>
           <div className="mainIconContainer">
             <div className="mainIcon">
-              <h3>Events</h3>
+              <Button>Events</Button>
             </div>
             <div className="mainTwoIcon">
               <div className="mainIcon">
 
-                <a href="#" onClick={this.openPeople}>People</a>
-                {this.state.showComponent ? <NewComponent /> : null}
+                <Button onClick={this.openPeople}>People</Button>
+
+                {this.state.showComponent ? <GalleryContainer /> : null}
               </div>
 
               <div className="mainIcon">
-                <h3>Projects</h3>
+                <Button>Projects</Button>
               </div>
             </div>
         </div>
+        <Button className="addButton" onClick={this.handleAddClick}>Add</Button>
+        {this.state.showAddComponent ? <Add /> : null}
       </div>
     );
   }
