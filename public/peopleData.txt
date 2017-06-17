@@ -1,28 +1,28 @@
 var peopleArr = [theresa, megan, yuri, sasha];
 
 var theresa = {
-	name: ’Theresa’,
+	name: ‘Theresa’,
 	skills: [‘C’, ‘Go’, ‘Ruby’],
-	bio: ‘Looking to meet up once a week at night to work on my side projects. I currently don’t need help but it would be nice to have company. ’,
+	bio: ‘Looking to meet up once a week at night to work on my side projects. I currently don’t need help but it would be nice to have company.’,
 	image: ‘t.jpg’
 }
 
 var megan = {
-	name: ’Megan’,
+	name: ‘Megan’,
 	skills: [‘HTML/CSS’, ‘JavaScript’, ‘Python’],
 	bio: ‘Interested in education tech. Would like to meet up for a Sunday and build a project.’,
 	image: ‘m.jpg’
 }
 
 var yuri = {
-	name: ’Yuri’,
+	name: ‘Yuri’,
 	skills: [‘Java’, ‘JavaScript’, ‘C’],
 	bio: ‘Interested in learning Go. Would like to meet up on the weekend to watch YouTube videos and tutorials to build a project with Go.’,
 	image: ‘y.jpg’
 }
 
 var sasha = {
-	name: ’Sasha’,
+	name: ‘Sasha’,
 	skills: [‘HTML/CSS’, ‘JavaScript’, ‘Ruby’],
 	bio: ‘Recent bootcamp grad looking to improve my skills by building projects or work on open source projects. It would be nice to have someone to bounce ideas and questions off of or pair program.’,
 	image: ‘s.jpg’
