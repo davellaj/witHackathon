@@ -1,8 +1,5 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
 import { hashHistory } from 'react-router';
-
-import GalleryZoomed from './GalleryZoomed';
 
 class GalleryContainer extends Component {
   constructor(props) {
@@ -76,4 +73,4 @@ class GalleryContainer extends Component {
   }
 }
 
-export default connect()(GalleryContainer);
+export default GalleryContainer;
