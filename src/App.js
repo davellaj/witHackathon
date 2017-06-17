@@ -4,6 +4,20 @@ import './App.css';
 
 class App extends Component {
   render() {
+    constructor(props) {
+      super(props);
+      this.state = {
+        showComponent: false,
+      };
+      this.openPeople = this.openPeople.bind(this);
+    }
+
+    openPeople() {
+      this.setState({
+        showComponent: true,
+      });
+    }
+
     return (
       <div className="App">
         <div className="addIcon">
@@ -19,8 +33,11 @@ class App extends Component {
             </div>
             <div className="mainTwoIcon">
               <div className="mainIcon">
-                <h3>People</h3>
+
+                <a href="#" onClick={this.openPeople}>People</a>
+                {this.state.showComponent ? <NewComponent /> : null}
               </div>
+
               <div className="mainIcon">
                 <h3>Projects</h3>
               </div>
